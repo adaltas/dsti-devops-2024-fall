@@ -30,3 +30,16 @@ jobs:
         ports:
           # Opens tcp port 6379 on the host and service container
           - 6379:6379
+
+  # #CD part with Heroku
+  # deploy:
+  #   needs: test 
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+  #       with:
+  #         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+  #         heroku_app_name: "xxxx" #Must be unique in Heroku
+  #         heroku_email: "xxxx"
+  #         appdir: user-api
