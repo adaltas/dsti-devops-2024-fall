@@ -192,7 +192,7 @@ vagrant provision
 
 ## Part 3. Declarative - Configure a health check for GitLab
 
-1. Read the [GitLab Health Check doc](https://docs.gitlab.com/ee/user/admin_area/monitoring/health_check.html).
+1. Read the [GitLab Health Check doc](https://docs.gitlab.com/ee/administration/monitoring/health_check.html).
 
 2. Run a health check using `curl`:
   - Connect to the VM using `vagrant ssh`.
