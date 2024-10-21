@@ -13,19 +13,19 @@ Vagrant.configure("2") do |config|
   # Define the gitlab_server VM
   config.vm.define "gitlab_server" do |server|
     # Specify the Vagrant box to use
-    server.vm.box = "centos/7"
+    server.vm.box = "bento/ubuntu-22.04"
     # Specify the VM ip address
     config.vm.network "forwarded_port", guest: 80, host: 8080
     # Specify the VM specs when using the Virtualbox provisioner
     server.vm.provider "virtualbox" do |vb|
       vb.name =  "gitlab.server.local"
       # VM RAM in MB
-      vb.memory = 2048
+      vb.memory = 4112
       # VM CPUs
       vb.cpus = 1
     end
     config.vm.provider "vmware_desktop" do |vmware|
-      vmware.vmx["memsize"] = "2048"
+      vmware.vmx["memsize"] = "4112"
       vmware.vmx["numvcpus"] = "1"
     end
   end
