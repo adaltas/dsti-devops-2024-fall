@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-conf
+data:
+  # property-like keys; each key maps to a simple value
+  GROUP_NAME: "DSTI"
+
+  # file-like keys
+  app.conf: |
+    color.good=purple
+    color.bad=yellow
+    allow.textmode=true
